@@ -9,8 +9,6 @@ const cfg = {};
 ===================================*/
 
 cfg.dirs = {};
-// cfg.dirs.commonViews = 'client/views/common';
-cfg.dirs.zip = './src/client/public/zip';
 
 /*=====  End of DIRECTORIES  ======*/
 
@@ -20,8 +18,6 @@ cfg.dirs.zip = './src/client/public/zip';
 =============================*/
 
 cfg.globs = {};
-cfg.globs.allJS = '**/*.js';
-cfg.globs.allSass = '**/*.scss';
 cfg.globs.views = '**/*.{ejs,html,htm}';
 
 /*=====  End of GLOBS  ======*/
@@ -31,10 +27,6 @@ cfg.globs.views = '**/*.{ejs,html,htm}';
 =============================*/
 
 cfg.files = {};
-cfg.files.views = `./src/client/views/${cfg.globs.views}`;
-cfg.files.mainApp = './src/client/public/js/app.js';
-cfg.files.angular = `./src/client/public/js/${cfg.globs.allJS}`;
-cfg.files.sass = `./src/client/public/scss/${cfg.globs.allSass}`;
 
 /*=====  End of FILES  ======*/
 

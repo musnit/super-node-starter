@@ -14,8 +14,6 @@ COPY typings.json /usr/src/app
 RUN typings install
 # Bundle app source
 COPY . /usr/src/app
-# Bundle client dependencies
-RUN webpack
 # Open the http port
 EXPOSE 8080
 # Start the app
