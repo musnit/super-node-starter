@@ -49,18 +49,6 @@ function Middleware(app: express.Express) {
   /*= End of IMPORT DATABASE TABLES ORM =*/
   /*=============================================<<<<<*/
 
-  /*=============================================>>>>>
-  = CLIENT MIDDLEWARE =
-  ===============================================>>>>>*/
-
-  app.set('view engine', 'ejs');
-  app.engine('ejs', require('ejs').renderFile);
-  app.use(express.static(`${__dirname}/../../src/client/public`));
-  app.set('views', `${__dirname}/../../src/client/views`);
-
-  /*= End of CLIENT MIDDLEWARE =*/
-  /*=============================================<<<<<*/
-
   let sess = {
     name: 'app.sid',
     genid: (req: express.Request) => {
