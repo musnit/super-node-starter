@@ -13,7 +13,67 @@ A complete NodeJS server starter template. This template is designed to give any
 
 Please refer to the [CONTRIBUTING.md](https://github.com/stephn-r/super-node-starter/blob/master/CONTRIBUTING.md) doc for any questions, concerns, or suggestions
 
-#### Getting Started
+#### Running For Development
+
+1. Install modules
+
+```sh
+npm install
+npm install -g sequelize-cli
+npm install -g typescript
+npm install -g typings
+npm install -g gulp-cli
+```
+
+2. Install typescript dependencies
+
+```sh
+typings install
+```
+
+3. Provide a `.env` file (copy the template) and provider you own values
+
+```sh
+cp .env.example .env
+```
+
+Create a local SQL database in MySQL/Postgres/etc and fill out the env values to connect there.
+
+4. Run the database migrations
+```sh
+sequelize db:migrate
+```
+
+5. Build the app, compiling typescript files
+
+```sh
+tsc
+```
+
+Note: You may want to install an editor plugin to automatically do this for you on file save, like atom-typescript
+
+6. Run the app!
+
+```sh
+npm start
+```
+
+7. Linting your code while developing
+
+Linting is dealt with by eslint, jshint and tslint. There are config files for those in the repo. You should install editor plugins to do this easily and automatically for you as you code and save files, eg, for atom:
+
+```sh
+apm install eslint
+apm install linter
+apm install linter-jshint
+apm install linter-eslint
+apm install linter-tslint
+```
+
+#### Deploying your code to heroku ####
+to do...
+
+#### Local Docker Deployment (Still WIP!)
 
 1. Build the Docker Image
 
